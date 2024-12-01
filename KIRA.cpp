@@ -1,9 +1,12 @@
 #include <iostream>
 #include <string.h>
 #include <cmath>
-using namespace std;
+// using namespace std;
 
 void letter(int a){
+    using std::cout;
+    using std::endl;
+
     switch (a){
     case 0:
         /* code for A */
@@ -823,7 +826,11 @@ void letter(int a){
 }
 
 int main(){
-    string name;
+    using std::cin;
+    using std::cout;
+    using std::endl;
+    
+    std::string name;
     cout<<"Enter your Name in CAPS: ";
     getline(cin,name);
 
