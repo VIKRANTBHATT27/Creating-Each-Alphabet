@@ -3,7 +3,7 @@
 #include <cmath>
 using namespace std;
 
-char letter(int a){
+void letter(int a){
     switch (a){
     case 0:
         /* code for A */
@@ -101,8 +101,7 @@ char letter(int a){
             }
 
             else if (i==3 ||  i==11){
-                cout<<"\t";
-                for ( int j=1; j<=8;j++){
+                for ( int j=1; j<14;j++){
                     cout<<" ";
                 }
                 cout<<"C";
@@ -133,8 +132,7 @@ char letter(int a){
                 }
                 
                 else{
-                    cout<<"\t   ";
-                    if (i>=5 || i<=9){
+                    for (int j=0;j<10;j++){
                         cout<<" ";
                     }
                 }
@@ -202,7 +200,11 @@ char letter(int a){
             cout<<"G";
             
             if (i==3 || i>8 && i<12){
-                cout<<"\t\tG ";
+                for (int j=0;j<13;j++){cout<<" ";}
+                if (i==9 || i==10){
+                    for (int j = 11-i;j>0;j--){cout<<" ";}
+                }
+                cout<<"G ";
                 if(i==9){
                     for (int j=0;j<4;j++){
                         cout<<"G ";
@@ -255,7 +257,8 @@ char letter(int a){
                 cout<<endl;
             }
             else{
-                cout<<"\t\tH"<<endl;
+                for (int j=0;j<14;j++){cout<<" ";}
+                cout<<"H"<<endl;
             }
         }
         break;
@@ -292,16 +295,15 @@ char letter(int a){
             
             else{
                 if (i>1 && i<9){
-                    cout<<"\t";
-                    for (int j=0;j<6;j++){
+                    for (int j=0;j<14;j++){
                         cout<<" ";
                     }
                     cout<<"J"<<endl;
                 }
                 
                 else if (i==9 || i==10){
-                    cout<<"J\t";
-                    for (int j=0;j<6;j++){
+                    cout<<"J";
+                    for (int j=0;j<13;j++){
                         cout<<" ";
                     }
                     cout<<"J"<<endl;
@@ -316,14 +318,14 @@ char letter(int a){
                             k--;
                         }
                     }
-                    cout<<"J";
+                    cout<<"J ";
 
                     
 
                     if (i!=13){
-                        cout<<"\t";
-                        for (int j=2*(13-i);j>0;j--){
-                        cout<<" ";
+                        for (int j=0;j<7;j++){cout<<" ";}
+                        if (i==11){
+                            for (int j=0;j<4;j++){cout<<" ";}
                         }
                     }
                     cout<<" J"<<endl;
@@ -364,10 +366,12 @@ char letter(int a){
         for (int i=1;i<=13;i++){
             cout<<"M ";
             if(i>8){
-                cout<<"\t\t\t\t";
+                for (int j=0;j<15;j++){cout<<"  ";}
             }
             else if (i==8){
-                cout<<"\t\tM\t\t";
+                for (int j=1;j<8;j++){cout<<"  ";}
+                cout<<"M";
+                for (int j=1;j<16;j++){cout<<" ";}
             }
             
             else{
